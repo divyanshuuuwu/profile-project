@@ -4,7 +4,7 @@ dns.setServers(["1.1.1.1", "8.8.8.8"])
 
 async function connectDB(params) {
 
-    await mongoose.connect("mongodb+srv://div_tester:hero123@backend1.vqamill.mongodb.net/projectProfile")
+    await mongoose.connect(process.env.MONGO_URI)
 
     console.log("connect to DB")
     
