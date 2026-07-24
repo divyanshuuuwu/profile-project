@@ -1,6 +1,12 @@
 const express = require("express");
 const app = express();
-app.use(express.json())
+const postModel = require("./models/post.model");
+app.use(express.json());
+
+
+app.post("/posts", (req , res)=>{
+    
+})
 
 
 
