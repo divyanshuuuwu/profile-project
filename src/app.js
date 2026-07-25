@@ -3,7 +3,9 @@ const app = express();
 const multer = require("multer")
 const postModel = require("./models/post.model");
 const uploadFile = require("./services/storage.service")
+const cors = require("cors")
 
+app.use(cors())
 
 app.use(express.json());
 
@@ -29,7 +31,7 @@ app.get("/posts" , async(req , res)=>{
 
         res.status(200).json({
             message: " posts feteched",
-            aloo:posts
+            posts:posts
         })
 })
 
